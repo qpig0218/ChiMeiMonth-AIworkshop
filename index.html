@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>醫學教育AI數位賦能工作坊｜奇美月 — 電影式宣傳頁</title>
-<meta name="description" content="探索如何運用AI技術打造數位工作流：從零開始打造屬於您的網站，結合理論與實作，體驗AI的應用與創新。">
+<meta name="description" content="探索AI技術，打造數位工作流：從零開始打造屬於您的網站，結合理論與實作，體驗AI的應用與創新。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;800&family=Noto+Serif+TC:wght@500;700&display=swap" rel="stylesheet">
 
 <meta property="og:title" content="醫學教育AI數位賦能工作坊｜奇美月">
-<meta property="og:description" content="探索如何運用AI技術打造數位工作流：從零開始打造屬於您的網站，結合理論與實作，體驗AI的應用與創新。">
+<meta property="og:description" content="探索AI技術，打造數位工作流：從零開始打造屬於您的網站，結合理論與實作，體驗AI的應用與創新。">
 <meta property="og:image" content="assets/Poster - 2025年11月23日.jpg">
 <meta name="theme-color" content="#0b1224">
 
@@ -47,8 +47,9 @@ header.nav {
   backdrop-filter: blur(6px);
 }
 .nav .brand { display:flex; gap:10px; align-items:center; }
+.nav .brand-text { font-size:.8rem; letter-spacing:.08em; font-weight:700; text-transform:uppercase; color:#e5eef6; }
 .nav .logo { width:36px; height:36px; border-radius:10px; background:#fff; display:grid; place-items:center; color:#0e1a22; font-weight:800; }
-.nav .kicker { font-size:.75rem; letter-spacing:.12em; opacity:.85; font-weight:700; text-transform:uppercase; }
+.kicker { font-size:.75rem; letter-spacing:.12em; opacity:.85; font-weight:700; text-transform:uppercase; }
 
 .btn {
   appearance:none; border:none; border-radius:12px; cursor:pointer;
@@ -87,15 +88,19 @@ header.nav {
 .grid-3 { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
 .grid-2 { display:grid; grid-template-columns: repeat(2, 1fr); gap:18px; }
 
-.poster { width:100%; border-radius:16px; border:1px solid var(--stroke); box-shadow:0 6px 14px rgba(0,0,0,.2); }
+.poster { width:100%; border-radius:16px; border:none; box-shadow:0 6px 14px rgba(0,0,0,.2); }
 .poster-wrap {
   position:relative;
   padding:18px;
   border-radius:28px;
   background: linear-gradient(135deg, rgba(255,255,255,.24), rgba(255,255,255,.05));
-  border:1px solid rgba(255,255,255,.35);
+  border:1px solid rgba(255,255,255,.25);
   box-shadow: 0 16px 30px rgba(0,0,0,.35);
 }
+.hero .hero-logo { margin-bottom:18px; }
+.hero .hero-logo.logo { width:44px; height:44px; border-radius:14px; font-size:.95rem; }
+.hero .title-main { white-space: nowrap; }
+.hero .brand { margin-bottom:18px; }
 .poster-wrap button { position:absolute; right:12px; bottom:12px; }
 
 .infostrip { position:relative; z-index:10; background:#fff; color:#0e1a22; }
@@ -124,7 +129,7 @@ footer { padding:36px 20px 60px; color:#9bb0be; text-align:center; }
 
 <header class="nav">
   <div class="brand">
-    <div class="logo">奇美</div>
+    <span class="brand-text">MEDICAL EDUCATION AI WORKSHOP</span>
   </div>
   <div class="actions">
     <a class="badge-pill" href="#register">立即報名</a>
@@ -134,11 +139,11 @@ footer { padding:36px 20px 60px; color:#9bb0be; text-align:center; }
 <section class="hero" id="top">
   <div class="wrap">
     <div class="copy">
+      <div class="logo hero-logo" role="img" aria-label="奇美">奇美</div>
       <div class="brand">
-        <div class="logo">奇美</div>
-        <div class="kicker">CHIMEI MONTH — OFFICIAL</div>
+        <div class="kicker">MEDICAL EDUCATION AI WORKSHOP — OFFICIAL</div>
       </div>
-      <h1>醫學教育AI數位賦能工作坊｜<span class="highlight">探索如何運用AI技術打造數位工作流</span></h1>
+      <h1><span class="title-main">醫學教育AI數位賦能工作坊</span>｜<span class="highlight">探索AI技術，打造數位工作流</span></h1>
       <div class="badges">
         <span class="badge-pill">2025/11/23（日), 上午9:45-12:15</span>
         <span class="badge-pill">地點：奇美博物館豐收廳</span>
@@ -225,7 +230,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
 <!-- JSON-LD：Event 結構化資料 -->
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "Event", "name": "奇美醫院 醫學教育AI數位賦能工作坊", "startDate": "2025-11-23", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "image": ["assets/poster.png"], "description": "探索如何運用AI技術：從零開始打造屬於您的網站，結合理論與實作，體驗AI的應用與創新。", "location": {"@type": "Place", "name": "奇美博物館豐收廳", "address": {"@type": "PostalAddress", "addressLocality": "臺南市", "addressCountry": "TW"}}, "organizer": {"@type": "Organization", "name": "奇美月"}}
+{"@context": "https://schema.org", "@type": "Event", "name": "奇美醫院 醫學教育AI數位賦能工作坊", "startDate": "2025-11-23", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "image": ["assets/poster.png"], "description": "探索AI技術，打造數位工作流：從零開始打造屬於您的網站，結合理論與實作，體驗AI的應用與創新。", "location": {"@type": "Place", "name": "奇美博物館豐收廳", "address": {"@type": "PostalAddress", "addressLocality": "臺南市", "addressCountry": "TW"}}, "organizer": {"@type": "Organization", "name": "奇美月"}}
 </script>
 
 </body>
