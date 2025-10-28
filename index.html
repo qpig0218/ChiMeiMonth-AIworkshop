@@ -48,7 +48,23 @@ header.nav {
 }
 .nav .brand { display:flex; gap:10px; align-items:center; }
 .nav .brand-text { font-size:.8rem; letter-spacing:.08em; font-weight:700; text-transform:uppercase; color:#e5eef6; }
-.nav .logo { width:36px; height:36px; border-radius:10px; background:#fff; display:grid; place-items:center; color:#0e1a22; font-weight:800; }
+.logo {
+  width:36px;
+  height:36px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  font-weight:800;
+  letter-spacing:.08em;
+  color:#e7f0f6;
+  background:transparent;
+  border:1.5px solid rgba(231,240,246,.7);
+}
+.logo.has-glow {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(231,240,246,.85);
+  box-shadow: 0 0 16px rgba(51,161,255,.28);
+}
 .kicker { font-size:.75rem; letter-spacing:.12em; opacity:.85; font-weight:700; text-transform:uppercase; }
 
 .btn {
@@ -72,9 +88,15 @@ header.nav {
 .hero .wrap { width:100%; max-width:1200px; margin:0 auto; padding: 90px 20px 40px;
   display:grid; grid-template-columns: 1.15fr .95fr; gap:28px; align-items:center; }
 .hero .copy { max-width: 560px; }
-.hero h1 { font-family: 'Noto Serif TC','Noto Sans TC',serif; font-weight:700;
-  font-size: clamp(30px, 4.4vw, 60px); line-height: 1.05; margin: 10px 0 12px; }
-.hero .highlight { color: var(--yellow); font-size: clamp(22px,3vw,44px); display:inline-block; }
+.hero h1 {
+  font-family: 'Noto Sans TC','Noto Sans CJK TC','Source Han Sans TC',sans-serif;
+  font-weight:700;
+  font-size: clamp(26px, 3.6vw, 50px);
+  line-height: 1.12;
+  letter-spacing:.01em;
+  margin: 12px 0 12px;
+}
+.hero .highlight { color: var(--yellow); font-size: clamp(20px,2.8vw,40px); display:inline-block; }
 .hero .badges { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0; }
 .meta { margin-top:8px; color:#c8d7e1; font-size:.9rem; }
 
@@ -91,16 +113,24 @@ header.nav {
 .poster { width:100%; border-radius:16px; border:none; box-shadow:0 6px 14px rgba(0,0,0,.2); }
 .poster-wrap {
   position:relative;
-  padding:18px;
+  padding:12px;
   border-radius:28px;
-  background: linear-gradient(135deg, rgba(255,255,255,.24), rgba(255,255,255,.05));
-  border:1px solid rgba(255,255,255,.25);
-  box-shadow: 0 16px 30px rgba(0,0,0,.35);
+  background: linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.04));
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow: 0 16px 30px rgba(0,0,0,.32);
 }
 .hero .hero-logo { margin-bottom:18px; }
-.hero .hero-logo.logo { width:44px; height:44px; border-radius:14px; font-size:.95rem; }
+.hero .hero-logo.logo {
+  width:46px;
+  height:46px;
+  border-radius:14px;
+  font-size:1rem;
+  border-width:1.8px;
+}
 .hero .title-main { white-space: nowrap; }
-.hero .brand { margin-bottom:18px; }
+.hero .brand {
+  margin-bottom:18px;
+}
 .poster-wrap button { position:absolute; right:12px; bottom:12px; }
 
 .infostrip { position:relative; z-index:10; background:#fff; color:#0e1a22; }
@@ -129,6 +159,7 @@ footer { padding:36px 20px 60px; color:#9bb0be; text-align:center; }
 
 <header class="nav">
   <div class="brand">
+    <span class="logo" aria-hidden="true">奇美</span>
     <span class="brand-text">MEDICAL EDUCATION AI WORKSHOP</span>
   </div>
   <div class="actions">
@@ -139,7 +170,7 @@ footer { padding:36px 20px 60px; color:#9bb0be; text-align:center; }
 <section class="hero" id="top">
   <div class="wrap">
     <div class="copy">
-      <div class="logo hero-logo" role="img" aria-label="奇美">奇美</div>
+      <div class="logo hero-logo has-glow" role="img" aria-label="奇美">奇美</div>
       <div class="brand">
         <div class="kicker">MEDICAL EDUCATION AI WORKSHOP — OFFICIAL</div>
       </div>
