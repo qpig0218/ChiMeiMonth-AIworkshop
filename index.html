@@ -46,20 +46,25 @@ header.nav {
   background: linear-gradient(180deg, rgba(7,13,24,.85), rgba(7,13,24,.55), transparent);
   backdrop-filter: blur(6px);
 }
-.nav .brand { display:flex; gap:10px; align-items:center; }
+.nav .brand { display:flex; gap:6px; align-items:center; }
 .nav .brand-text { font-size:.8rem; letter-spacing:.08em; font-weight:700; text-transform:uppercase; color:#e5eef6; }
 .logo {
   width:36px;
   height:36px;
   border-radius:10px;
-  display:grid;
-  place-items:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
   font-weight:800;
   letter-spacing:.08em;
   color:#e7f0f6;
   background:transparent;
   border:1.5px solid rgba(231,240,246,.7);
+  line-height:1;
 }
+.logo span { display:block; }
 .logo.has-glow {
   background: rgba(255,255,255,0.08);
   border-color: rgba(255,255,255,.95);
@@ -119,7 +124,7 @@ header.nav {
   border:1px solid rgba(255,255,255,.18);
   box-shadow: 0 16px 30px rgba(0,0,0,.32);
 }
-.hero .hero-logo { margin-bottom:18px; }
+.hero .hero-logo { margin-bottom:0; }
 .hero .hero-logo.logo {
   width:52px;
   height:52px;
@@ -129,6 +134,12 @@ header.nav {
 }
 .hero .title-main { white-space: nowrap; }
 .hero .brand {
+  margin-bottom:18px;
+}
+.hero-brand {
+  display:flex;
+  align-items:center;
+  gap:8px;
   margin-bottom:18px;
 }
 .poster-wrap button { position:absolute; right:12px; bottom:12px; }
@@ -160,7 +171,7 @@ footer { padding:36px 20px 60px; color:#9bb0be; text-align:center; }
 <header class="nav">
   <div class="brand">
     <span class="logo" aria-hidden="true"><span>奇</span><span>美</span></span>
-    <span class="brand-text">CHI MEI AI WORKSHOP - OFFICIAL</span>
+    <span class="brand-text">CHI MEI AI WORKSHOP — OFFICIAL</span>
   </div>
   <div class="actions">
     <a class="badge-pill" href="#register">立即報名</a>
@@ -170,9 +181,9 @@ footer { padding:36px 20px 60px; color:#9bb0be; text-align:center; }
 <section class="hero" id="top">
   <div class="wrap">
     <div class="copy">
-      <div class="logo hero-logo has-glow" role="img" aria-label="奇美"><span>奇</span><span>美</span></div>
-      <div class="brand">
-        <div class="kicker">CHI MEI AI WORKSHOP — OFFICIAL</div>
+      <div class="brand hero-brand">
+        <div class="logo hero-logo has-glow" role="img" aria-label="奇美"><span>奇</span><span>美</span></div>
+        <div class="hero-brand-text kicker">CHI MEI AI WORKSHOP — OFFICIAL</div>
       </div>
       <h1><span class="title-main">醫學教育AI數位賦能工作坊</span><span class="highlight">探索AI技術，打造數位工作流</span></h1>
       <div class="badges">
